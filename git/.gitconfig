@@ -4,41 +4,41 @@
     ca = commit --amend
     can = commit --amend -n
 
-	ac = !git add . && git commit
-	acn = !git add . && git commit -n
-	aca = !git add . && git commit --amend
-	acan = !git add . && git commit --amend -n
+    ac = !git add . && git commit
+    acn = !git add . && git commit -n
+    aca = !git add . && git commit --amend
+    acan = !git add . && git commit --amend -n
 
-	pl = pull
-	ps = push
+    pl = pull
+    ps = push
     pshn = push --no-verify
-	st = status
-	ch = checkout
-	br = branch
+    st = status
+    ch = checkout
+    br = branch
 
-	chb = !bash -c \"git checkout -b $1\"
+    chb = !bash -c \"git checkout -b $1\"
     chp = !bash -c \"git checkout $1 && git pull\"
 
-	cp = cherry-pick
-	cpc = cherry-pick --continue
-	cpa = cherry-pick --abort
+    cp = cherry-pick
+    cpc = cherry-pick --continue
+    cpa = cherry-pick --abort
 	
-	rs = reset
-	rss = reset --soft
-	rsh = reset --hard
-	urs = reset --hard ORIG_HEAD
-	rsby = !bash -c \"git reset @~$1\"
-	rshby = !bash -c \"git reset --hard @~$1\"
+    rs = reset
+    rss = reset --soft
+    rsh = reset --hard
+    urs = reset --hard ORIG_HEAD
+    rsby = !bash -c \"git reset @~$1\"
+    rshby = !bash -c \"git reset --hard @~$1\"
 
-	rb = rebase
-	rbc = rebase --continue
-	rba = rebase --abort
-	rbs = rebase --skip
-	rbi = rebase -i
-	rbiby = !bash -c \"git rebase -i @~$1\"
+    rb = rebase
+    rbc = rebase --continue
+    rba = rebase --abort
+    rbs = rebase --skip
+    rbi = rebase -i
+    rbiby = !bash -c \"git rebase -i @~$1\"
 
     mr = merge
     mrc = merge --continue
     mra = merge --abort
     
-	dcb = !curr_br=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git branch -D $curr_br
+    dcb = !curr_br=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git branch -D $curr_br
