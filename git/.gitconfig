@@ -41,4 +41,15 @@
     mrc = merge --continue
     mra = merge --abort
     
+    s = stash
+    ss = !bash -c \"git stash save $1\"
+    sa = stash apply
+    sp = stash pop
+    
     dcb = !curr_br=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git branch -D $curr_br
+    
+[core]
+    editor = vscode --wait
+    autocrlf = false
+    autolf = true
+    eof = lf
